@@ -1,0 +1,203 @@
+Phần B
+13.
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    int x,y;
+    cin >> x >> y;
+    double dis;
+    dis = (double) sqrt(x * x +y * y);
+    cout << dis;
+    return 0;
+}
+
+14.
+
+
+15.
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int n = 10;
+    string n0 = "a";
+    string n1 = "b";
+    string tmp;
+
+    cout << n0 << endl << n1 << endl;
+    for (int i = 2; i < n; i++) {
+        tmp = n1;
+        n1 += n0;
+        n0 = tmp;
+        cout << n1 << endl;
+    }
+    return 0;
+}
+16.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a , b , c;
+    cin >> a >> b >> c;
+    (a == b && b == c) ? cout << "true" : cout << "false";
+    return 0;
+}
+17.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int year;
+    cin >> year;
+    ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) ) ? cout << "true" : cout << "false";
+    return 0;
+}
+18.
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    double x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    double dis;
+    dis = sqrt((x2 - x1) * (x2 - x1) +(y2 - y1) * (y2 - y1));
+    cout << dis;
+    return 0;
+}
+
+19.
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    int x, y, z;
+    bool b;
+    cin >> x >> y >> z;
+    ((x >= y && y >= z) || (x <= y && y <=z)) ? b = true : b = false;
+    cout << b;
+    return 0;
+}
+20.
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    (a%7 == 0 && b%7 == 0) ? cout << "true" : cout << "false";
+    return 0;
+}
+21.
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double a, b, c;
+
+    do {
+        cin >> a >> b >> c;
+    }
+    while ((a + b <= c) || (a + c <= b) || (b + c <= a));
+
+    double s = (a +b + c) / 2;
+    double area = sqrt(s * (s - a) * (s - b) * (s - c));
+    cout << area;
+    return 0;
+}
+22.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double weigh, height;
+    cin >> weigh >> height;
+
+    double BMI = weigh / (height * height);
+    cout << BMI;
+    return 0;
+}
+23.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+    int x, y;
+    cin >> x >> y;
+    cout << ((x + y) + abs(x - y) ) /2;
+}
+
+24.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int day, month, year;
+    cin >> day >> month >> year;
+
+    int JMD;
+    JMD = (day + ((153 * (month + 12 * ((14 - month) / 12) - 3) + 2) / 5) +
+     (365 * (year + 4800 - ((14 - month) / 12))) +
+     ((year + 4800 - ((14 - month) / 12)) / 4) -
+    ((year + 4800 - ((14 - month) / 12)) / 100) +
+    ((year + 4800 - ((14 - month) / 12)) / 400)  - 32045) % 7;
+
+    switch (JMD) {
+        case 0 :
+            cout << "Monday";
+            break;
+        case 1 :
+            cout << "Tuesday";
+            break;
+        case 2 :
+            cout << "Wednesday";
+            break;
+        case 3 :
+            cout << "Thursday";
+            break;
+        case 4 :
+            cout << "Friday";
+            break;
+        case 5 :
+            cout << "Saturday";
+            break;
+        case 6 :
+            cout << "Sunday";
+            break;
+    }
+    return 0;
+}
+25.
+
+
+
